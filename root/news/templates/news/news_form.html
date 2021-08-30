@@ -7,7 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Welcome to events</h2>
+    <h2>Create new articles</h2>
+    <form action="{% url 'createnews' %}" method = "POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value = "submit">
+    </form>
     
 </body>
 </html>
