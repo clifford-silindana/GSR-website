@@ -22,4 +22,5 @@ def createNews(request):
     return render(request, "news/news_form.html", context)
 
 
-#def allNews(request):
+def thanks(request):
+    return render(request, "news/thanks.html",)
