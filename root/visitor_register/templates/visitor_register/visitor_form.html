@@ -10,15 +10,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Sign in or out your visitor(s)</h2>
-    <form action="">
+    <h2>Sign in your visitors</h2>
+    <form action="" method = "POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <br>
+        <button><a href="{% url 'visitor_register:index' %}">Back</a></button>
         <input id = "submitNewVisitor" type="submit" value = "submit">
+
     </form>
 
-    <script src = "{% static 'visitor_register/javascript/visitor_form.js'%}"></script>
+    
     
 </body>
 </html>

@@ -1,1 +1,1 @@
-alert("Welcome to sign in and out");
+//alert("Welcome to sign in and out");

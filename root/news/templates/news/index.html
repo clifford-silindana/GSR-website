@@ -8,6 +8,17 @@
 </head>
 <body>
     <h1>Welcome to news</h1>
-    <button><a href="{% url 'createnews' %}">Create new article</a></button>
+    <h1>We have {{totalNewsNumber}} news</h1>
+    {% for news in totalNews %}
+
+        {{news.title}}
+        <button><a href="update/{{news.id}}/">Edit</a></button>
+        <button><a href="delete/{{news.id}}/">Delete</a></button>
+        <br>
+        
+    {% endfor %}
+
+    <button><a href="create/">Create new news</a></button>
+    
 </body>
 </html>

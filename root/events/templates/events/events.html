@@ -8,8 +8,16 @@
 </head>
 <body>
     <h2>Welcome to events</h2>
-    <h2>The total events is {{totalEvents}}</h2>
-    <button><a href = "{% url 'createevent' %}">Create new event<a></button>
+    <h2>We have {{total}} events</h2>
+    <h2>The total events is:</h2>
+    {% for event in totalEvents %}
+    <form action="">
+    <p>{{ event.event_name }}</p>
+    <a href="update/{{event.id}}/">Edit</a>
+    <a href="delete/{{event.id}}/">Delete</a>
+    </form>
+    {% endfor %}
+    <button><a href = "createevent/">Create new event<a></button>
     
 </body>
 </html>

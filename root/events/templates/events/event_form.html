@@ -9,7 +9,7 @@
 <body>
     <h2>Create new event</h2>
     <br>
-    <form action="{% url 'createevent' %}" method = "POST">
+    <form action="" method = "POST">
         {% csrf_token %}
         {{ form.as_p }}
         <br>

@@ -11,7 +11,17 @@
 </head>
 <body>
     <h2>Welcome to visitors</h2>
-    <button><a href="{% url 'newvisitor' %}">Sign in your visitor</a></button>
+    <h2>We have {{numberOfVisitors}} visitors</h2>
+    <br><br>
+    {% for visitor in visitors %}
+        {{visitor.resident_name}}
+        <button><a href="update/{{visitor.id}}/">Edit</a></button>
+        <button><a href="delete/{{visitor.id}}/">Delete</a></button>
+        <br><br>
+
+    {% endfor %}
+
+    <button><a href="newvisitor/">Sign in your visitor</a></button>
     
 
     <!--<script src = "{% static 'visitor_register/javascript/index.js'%}"></script>-->
